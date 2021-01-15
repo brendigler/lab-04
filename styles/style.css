@@ -3,10 +3,11 @@ span {
     align-items: center;
     justify-content: center;
     height: 100%;
+    border: 1px solid cadetblue;
 }
 .container {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: 200px repeat(4, 1fr);
     grid-template-rows: 100px 200px 250px 150px;
     /* grid-template-rows: 20% 20% 20% 20% 20%; */
 }
@@ -25,7 +26,26 @@ body > div:first-of-type {
 }
 
 body > ul:first-of-type {
-    background-color: beige;
+    background-color: rgb(233, 245, 220);
     grid-column: 2 / 6;
+    display: flex;
+}
 
+.twoby {
+    width: 50%;
+}
+
+body > ul:last-of-type {
+    background-color: rgb(255, 196, 196);
+    grid-column: 2 / 6;
+    display: flex;
+}
+
+.fourby {
+    width: 50%;
+}
+
+footer {
+    background-color: rgb(205, 218, 255);
+    grid-column: 2 / 6;
 }
