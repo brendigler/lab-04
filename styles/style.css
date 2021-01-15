@@ -22,7 +22,6 @@ header {
     grid-column-start: 1;
     grid-column-end: 6;
     grid-row: 1;
-
 }
 
 /* b */
@@ -90,7 +89,7 @@ footer {
         border: 1px solid #333;
     }
     .container {
-        grid-template-columns: 200px repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
     }
 
     /* a */
@@ -128,8 +127,6 @@ footer {
         flex-wrap: wrap;
     }
     
-    .fourby {
-    }
     /* e */
     .fourby:first-of-type {
         background-color: #9900cc;
@@ -160,7 +157,7 @@ footer {
 
 
 /* Mobile Layout */
-@media (max-width: 425px) {
+@media (max-width: 480px) {
     span {
         border: 1px solid #333;
     }
@@ -179,7 +176,6 @@ footer {
         background-color: #0a94c2;
         grid-row: span 1; 
         grid-column: 1/5;
-
     }
 
     /* c-d  */
@@ -188,7 +184,6 @@ footer {
         flex-wrap: wrap;
         grid-row: span 1;
         grid-column: 1/5;
-
     }
     
     .twoby {
@@ -210,7 +205,6 @@ footer {
         background-color: #2985a3;
         flex-wrap: wrap;
         grid-column: 1/5;
-
     }
     .fourby {
         width: 50%;
@@ -235,6 +229,5 @@ footer {
     footer {
         background-color: #666666;
         grid-column: 1/5;
-
     }   
 }
