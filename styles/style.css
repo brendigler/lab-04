@@ -1,32 +1,38 @@
+/* Desktop (base) layout */
+* {
+    box-sizing: border-box;
+}
 span {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100%;
-    border: 1px solid cadetblue;
+    border: 1px solid #333;
+    font-family: Arial, Helvetica, sans-serif;
 }
 .container {
     display: grid;
     grid-template-columns: 200px repeat(4, 1fr);
     grid-template-rows: 100px 200px 250px 150px;
-    /* grid-template-rows: 20% 20% 20% 20% 20%; */
 }
 
+/* a */
 header {
-    background-color: aliceblue;
+    background-color: #cc0000;
     grid-column-start: 1;
     grid-column-end: 6;
     grid-row: 1;
 
 }
 
+/* b */
 body > div:first-of-type {
-    background-color: antiquewhite;
+    background-color: #cc6600;
     grid-row: span 4;
 }
 
+/* c-d */
 body > ul:first-of-type {
-    background-color: rgb(233, 245, 220);
     grid-column: 2 / 6;
     display: flex;
 }
@@ -34,9 +40,16 @@ body > ul:first-of-type {
 .twoby {
     width: 50%;
 }
-
+/* c */
+.twoby:first-of-type {
+    background-color: #cccc00;
+}
+/* d */
+.twoby:last-of-type {
+    background-color: #99cc00;
+}
+/* e-f-g-h */
 body > ul:last-of-type {
-    background-color: rgb(255, 196, 196);
     grid-column: 2 / 6;
     display: flex;
 }
@@ -44,8 +57,184 @@ body > ul:last-of-type {
 .fourby {
     width: 50%;
 }
-
+/* e */
+.fourby:first-of-type {
+    background-color: #66cc00;
+}
+/* f */
+.fourby:nth-of-type(2){
+    background-color: #33cc00;
+}
+/* g */
+.fourby:nth-of-type(3){
+    background-color:	#00cc66;
+}
+/* h */
+.fourby:nth-of-type(4){
+    background-color: #00cc99;
+}
+/* i */
 footer {
-    background-color: rgb(205, 218, 255);
+    background-color: #00cccc;
     grid-column: 2 / 6;
+}
+
+
+
+
+
+
+/* Tablet Layout */
+@media (max-width: 768px) {
+    span {
+        border: 1px solid #333;
+    }
+    .container {
+        grid-template-columns: 200px repeat(3, 1fr);
+    }
+
+    /* a */
+    header {
+        background-color: 	#cc0033;    
+    }
+
+    /* b  */
+    body > div:first-of-type {
+        background-color: 	#cc0066;
+    }
+
+    /* c-d  */
+    body > ul:first-of-type {
+        grid-column: 2 / 5;
+        flex-wrap: wrap;
+    }
+    
+    .twoby {
+        width: 100%;
+    }
+
+    /* c */
+    .twoby:first-of-type {
+        background-color: #cc0099;
+    }
+    /* d */
+    .twoby:last-of-type {
+        background-color: #cc00cc;
+    }
+
+    /*  e-f-g-h */
+    body > ul:last-of-type {
+        grid-column: 2 / 5;
+        flex-wrap: wrap;
+    }
+    
+    .fourby {
+    }
+    /* e */
+    .fourby:first-of-type {
+        background-color: #9900cc;
+    }
+    /* f */
+    .fourby:nth-of-type(2){
+        background-color: #6600cc;
+    }
+    /* g */
+    .fourby:nth-of-type(3){
+        background-color:	#3300cc;
+    }
+    /* h */
+    .fourby:nth-of-type(4){
+        background-color: #0000cc;
+    }
+
+    /* i */
+    footer {
+        background-color: #0033cc;
+    }   
+}
+
+
+
+
+
+
+
+/* Mobile Layout */
+@media (max-width: 425px) {
+    span {
+        border: 1px solid #333;
+    }
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 75px 150px 250px 500px 80px;
+    }
+
+    /* a */
+    header {
+        background-color: #0099cc;
+    }
+
+    /* b  */
+    body > div:first-of-type {
+        background-color: #0a94c2;
+        grid-row: span 1; 
+        grid-column: 1/5;
+
+    }
+
+    /* c-d  */
+    body > ul:first-of-type {
+        grid-column: 2 / 5;
+        flex-wrap: wrap;
+        grid-row: span 1;
+        grid-column: 1/5;
+
+    }
+    
+    .twoby {
+        width: 100%;
+    }
+
+    /* c */
+    .twoby:first-of-type {
+        background-color: #148fb8;
+    }
+    /* d */
+    .twoby:last-of-type {
+        background-color: #1f8aad;
+    }
+
+
+    /*  e-f-g-h */
+    body > ul:last-of-type {
+        background-color: #2985a3;
+        flex-wrap: wrap;
+        grid-column: 1/5;
+
+    }
+    .fourby {
+        width: 50%;
+    }
+    /* e */
+    .fourby:first-of-type {
+        background-color: #338099;
+    }
+    /* f */
+    .fourby:nth-of-type(2){
+        background-color: #3d7a8f;
+    }
+    /* g */
+    .fourby:nth-of-type(3){
+        background-color:	#477585;
+    }
+    /* h */
+    .fourby:nth-of-type(4){
+        background-color: #52707a;
+    }
+    /* i */
+    footer {
+        background-color: #666666;
+        grid-column: 1/5;
+
+    }   
 }
